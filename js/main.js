@@ -396,7 +396,7 @@ function initMap() {
 		fillColor: '#1CB14B',
 		fillOpacity: 1.0,
 		strokeWeight: 0,
-		scale: 10
+		scale: 5
 	}
 
 	// {CIRCLE: 0, FORWARD_CLOSED_ARROW: 1, FORWARD_OPEN_ARROW: 2, BACKWARD_CLOSED_ARROW: 3, BACKWARD_OPEN_ARROW: 4}
@@ -405,7 +405,7 @@ function initMap() {
 		fillColor: '#ff0000',
 		fillOpacity: 1.0,
 		strokeWeight: 0,
-		scale: 10
+		scale: 8
 	}
 
 	var home = new google.maps.LatLng(59.330473, 18.051249);
