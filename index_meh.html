@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <!-- No Copyright -->
+  <title>Boilerplate Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    #googleMap {
+      width: auto;
+      height: 300px;
+      -webkit-filter: grayscale(50%);
+      filter: grayscale(50%);
+       border: 2px solid #908b85;
+  border-radius: 7px;
+  box-shadow: 
+    7px 10px 34px 1px 
+    rgba(0, 0, 0, 0.68), 
+    inset -1px -6px 12px 0.1px 
+    #89847e;
+  }
+  </style>
+</head>
+
+<body>
+  <div>
+  </div>
+
+  <!-- Adding Google Maps -->
+
+  <div id="googleMap"></div>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+    
+    function initialize() {
+    var mapProp = {
+    center:myCenter,
+    zoom:12,
+    scrollwheel:false,
+    draggable:false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    
+    var marker = new google.maps.Marker({
+    position:myCenter,
+    });
+    
+    marker.setMap(map);
+    }
+    
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+  <footer class="container-fluid text-center">
+    <div>
+      <p>Written and coded by <a href="https://www.freecodecamp.com/egodominusvos" target="_blank">Anthony</a>. Boilerplate Project for <a href="https://www.freecodecamp.com/" target="_blank">FreeCodeCamp</a>, using the tutorials on <a href="https://www.w3schools.com/bootstrap/default.asp"
+          target="_blank">W3Schools</a>, all clumsily hacked in <a href="https://codepen.io/" target="_blank">CodePen</a>.</p>
+    </div>
+  </footer>
+  </footer>
+  <script>
+  </script>
+</body>
+
+</html>
