@@ -413,14 +413,12 @@ function initMap() {
 	var metro_positions = rawPositions.map(convertToMapPositions)
 
 	function convertToMapPositions(el) {
-	  console.log(el.Latitude)
 	  return {
 			id: el.ID.toString(),
 			position: new google.maps.LatLng(el.Latitude, el.Longitude),
 			address: el.Adress
 		}
 	}
-
 
 	// home
 
@@ -432,13 +430,13 @@ function initMap() {
 		position: home,
 		icon: icon_home,
 		map: map,
+		// label: { text: 'Index', color: "white", fontSize: '12px', fontFamily: 'Times'},
 		title: 'Index Stockholm'
 	});
 
-	// home_marker.addListener('click', function() {
-	// 	console.log(marker);
-	// 	infowindow.open(map, home_marker);
-	// });
+	home_marker.addListener('click', function() {
+		infowindow.open(map, home_marker);
+	});
 
 	// paper
 	for (var i = 0; i < metro_positions.length; i++) {
