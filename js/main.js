@@ -442,24 +442,47 @@ function initMap() {
 	for (var i = 0; i < metro_positions.length; i++) {
 
 		// console.log(metro_positions[i]);
+		let pos = metro_positions[i];
 
 		let news_marker = new google.maps.Marker({
-			position: metro_positions[i].position,
+			position: pos.position,
 			icon: icon_metro,
 			map: map,
 			// label: 'wut',
-			title: metro_positions[i].address
+			title: pos.address
 		});
 
 		let infowindow = new google.maps.InfoWindow({
-			content: metro_positions[i].address
+			content: pos.address
 		});
 
 		news_marker.addListener('click', function() {
-			console.log(news_marker);
-			infowindow.open(map, news_marker);
+			console.log(pos);
+			$("#markerModal").data('marker-id', pos.id);
+			$("#markerModal").data('marker-lat', pos.position.lat);
+			$("#markerModal").data('marker-lng', pos.position.lng);
+			$("#markerModal").data('marker-title', pos.address);
+
+			$('#markerModal').modal('show');
 		});
 
 	};
 
 }
+
+$(document).ready(function(){
+	
+	$('#markerModal').on('show.bs.modal', function (event) {
+
+	  var modal = $(this)
+	  var button = $(event.relatedTarget) // Button that triggered the modal
+	  var address =  $(this).data('marker-title') // Extract info from data-* attributes
+	  modal.find('.modal-title').text(address);
+
+	  modal.find('.lat').text($(this).data('marker-lat'));
+	  modal.find('.lng').text($(this).data('marker-lng'));
+	  modal.find('.modal-body a').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + address);
+	})
+
+});
+
