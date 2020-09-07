@@ -408,6 +408,8 @@ function initMap() {
 		scale: 8
 	}
 
+	$('#aboutModal').modal('show');
+
 	var home = new google.maps.LatLng(59.330473, 18.051249);
 
 	var metro_positions = rawPositions.map(convertToMapPositions)
@@ -473,17 +475,25 @@ $(document).ready(function(){
 	
 	$('#markerModal').on('show.bs.modal', function (event) {
 
-	  var modal = $(this);
-	  var button = $(event.relatedTarget); // Button that triggered the modal
-	  var address =  modal.data('marker-title'); // Extract info from data-* attributes
+	  let modal = $(this);
+	  let button = $(event.relatedTarget); // Button that triggered the modal
+	  let address =  modal.data('marker-title'); // Extract info from data-* attributes
 	  modal.find('.modal-title').text(address);
 
 	  modal.find('.lat').text(modal.data('marker-lat'));
 	  modal.find('.lng').text(modal.data('marker-lng'));
 	  modal.find('.modal-body a').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + address);
-	  // modal.find('img').attr('src', modal.data('marker-id'));
+
+	  let imgUrl = '/img/bins/' + pad(modal.data('marker-id'),3) + '.jpg';
+
+	  modal.find('img').attr('src', imgUrl);
 	  
 	})
 
 });
 
+function pad(n, width, z) {
+  z = z || '0';
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}

@@ -18,7 +18,7 @@ body {
 }
 
 #brand img {
-	width: 80px;
+	width: 60px;
 }
 
 #footer {
@@ -85,6 +85,7 @@ body {
 .delimiter {
 	margin-right: 3px;
 }
+
 /** MOBILE **/
 
 @media (max-width: 767.98px) {
