@@ -435,7 +435,8 @@ function initMap() {
 	});
 
 	home_marker.addListener('click', function() {
-		infowindow.open(map, home_marker);
+		// infowindow.open(map, home_marker);
+		$('#aboutModal').modal('show');
 	});
 
 	// paper
@@ -457,7 +458,6 @@ function initMap() {
 		});
 
 		news_marker.addListener('click', function() {
-			console.log(pos);
 			$("#markerModal").data('marker-id', pos.id);
 			$("#markerModal").data('marker-lat', pos.position.lat);
 			$("#markerModal").data('marker-lng', pos.position.lng);

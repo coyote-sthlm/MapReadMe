@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>coyote - read me</title>
+  <title>Coyote - Read Me</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,9 +13,10 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -28,8 +29,8 @@
   <body>
 
     <!-- Modal -->
-    <div class="modal fade" id="markerModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-      <div class="modal-dialog modal-full" role="document">
+    <div class="modal fade modal-marker" id="markerModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
@@ -40,7 +41,7 @@
           <div class="modal-body">
             <img src='img/bins/test600.jpg' />
             <div class="actions">
-              <div class="coords"><span class="lat">59.345017</span>°, <span class="lng">18.059869</span>°</div>
+              <div class="coords"><span class="lat">59.345017</span><span class="delimiter">°, </span><span class="lng">18.059869</span>°</div>
               <div class="navigate d-lg-none"><a class="btn btn-primary" href="#">Navigate</a></div>
               <div class="navigate-dt d-none d-lg-block"><a href="#">Navigate</a></div>
             </div>
@@ -49,17 +50,33 @@
       </div>
     </div>
 
-    <div id="logo"></div>
-    <div id="about"></div>
-    <div id="map"></div>
-    
-
-    <div id="header">
-      <div>
-      <marquee scrollamount="1" direction="right">READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME</marquee>
+    <!-- Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+      <div class="modal-dialog " role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">READ ME</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="about-text">
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui.</p>
+                <p><a href="#">Newsletter</a></p>
+                <p><a href="#">coyote.pt</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div id="brand" >
+      <img src="/img/logo-fill.png" data-toggle="modal" data-target="#aboutModal" />
+    </div>
+
+    <div id="map"></div>
+    
     <div id="footer">
       <div>
       <marquee scrollamount="1">READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME READ ME</marquee>
