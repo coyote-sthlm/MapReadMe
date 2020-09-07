@@ -408,7 +408,7 @@ function initMap() {
 		scale: 8
 	}
 
-	$('#aboutModal').modal('show');
+	//$('#aboutModal').modal('show');
 
 	var home = new google.maps.LatLng(59.330473, 18.051249);
 
