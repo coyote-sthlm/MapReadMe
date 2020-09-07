@@ -10,6 +10,10 @@ body {
   font-family: 'BeaufortW01', sans-serif;
 }
 
+a, a:hover, a:focus {
+	color: #026631;
+}
+
 #brand {
 	position: fixed;
 	top: 20px;
@@ -67,7 +71,7 @@ body {
 
 .modal-marker .modal-body .actions .navigate-dt a {
 	text-decoration: underline;
-	color: #1CB14B;
+	color: #026631;
 }
 
 /* GENERAL MODAL STYLES */
@@ -160,7 +164,7 @@ body {
 }
 
 .btn-primary, .btn-primary:hover, .btn-primary:active {
-	background-color: #1CB14B;
-	border-color: #1CB14B;
+	background-color: #026631;
+	border-color: #026631;
 	border-radius: 0;
 }
