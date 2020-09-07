@@ -10,6 +10,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'BeaufortW01', sans-serif;
 }
 
 #footer {
@@ -21,6 +22,24 @@ body {
 	background-color: black;
 	z-index: 1000;
 	color: white;
+	font-size 12
+}
+
+
+
+#footer div {
+	line-height: 25px;
+	font-size: 10px; 
+}
+
+#footer div {
+	/*line-height: 50px;*/
+	font-size: 16px; 
+}
+
+/*#header div {
+	line-height: 25px;
+	font-size: 10px; 
 }
 
 
@@ -33,18 +52,9 @@ body {
 	background-color: black;
 	z-index: 1000;
 	color: white;
-}
+	display: none;
+}*/
 
-
-#footer div {
-	line-height: 25px;
-	font-size: 10px; 
-}
-
-#header div {
-	line-height: 25px;
-	font-size: 10px; 
-}
 
 /*modal-lg
 .modal-full {

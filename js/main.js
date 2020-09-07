@@ -462,7 +462,6 @@ function initMap() {
 			$("#markerModal").data('marker-lat', pos.position.lat);
 			$("#markerModal").data('marker-lng', pos.position.lng);
 			$("#markerModal").data('marker-title', pos.address);
-
 			$('#markerModal').modal('show');
 		});
 
@@ -474,14 +473,16 @@ $(document).ready(function(){
 	
 	$('#markerModal').on('show.bs.modal', function (event) {
 
-	  var modal = $(this)
-	  var button = $(event.relatedTarget) // Button that triggered the modal
-	  var address =  $(this).data('marker-title') // Extract info from data-* attributes
+	  var modal = $(this);
+	  var button = $(event.relatedTarget); // Button that triggered the modal
+	  var address =  modal.data('marker-title'); // Extract info from data-* attributes
 	  modal.find('.modal-title').text(address);
 
-	  modal.find('.lat').text($(this).data('marker-lat'));
-	  modal.find('.lng').text($(this).data('marker-lng'));
+	  modal.find('.lat').text(modal.data('marker-lat'));
+	  modal.find('.lng').text(modal.data('marker-lng'));
 	  modal.find('.modal-body a').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + address);
+	  // modal.find('img').attr('src', modal.data('marker-id'));
+	  
 	})
 
 });
