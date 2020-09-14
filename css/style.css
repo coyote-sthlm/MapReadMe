@@ -207,3 +207,10 @@ a, a:hover, a:focus {
 	border-color: #1CB14B;
 	border-radius: 0;
 }
+
+#markerLayer img {
+  animation: pulse .5s infinite alternate;
+  -webkit-animation: pulse .5s infinite alternate;
+  transform-origin: center;
+  -webkit-transform-origin: center;
+}

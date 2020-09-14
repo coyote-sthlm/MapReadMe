@@ -428,13 +428,24 @@ function initMap() {
 	}
 
 	// {CIRCLE: 0, FORWARD_CLOSED_ARROW: 1, FORWARD_OPEN_ARROW: 2, BACKWARD_CLOSED_ARROW: 3, BACKWARD_OPEN_ARROW: 4}
-	var icon_home = {
+	var icon_home2 = {
 		path: google.maps.SymbolPath.CIRCLE,
-		fillColor: '#00ca57',
+		fillColor: '#ff0000', //'#00ca57',
 		fillOpacity: 1.0,
 		strokeWeight: 0,
 		scale: 8
 	}
+
+
+	var icon_home = {
+		url: '/img/animated-marker.svg',
+		// This marker is 20 pixels wide by 32 pixels high.
+		size: new google.maps.Size(120, 120),
+		// The origin for this image is (0, 0).
+		origin: new google.maps.Point(0, 0),
+		// The anchor for this image is the base of the flagpole at (0, 32).
+		anchor: new google.maps.Point(60, 60)
+	};
 
 	//$('#aboutModal').modal('show');
 
@@ -453,6 +464,12 @@ function initMap() {
 
 	// home
 
+	var myoverlay = new google.maps.OverlayView();
+    myoverlay.draw = function () {
+        this.getPanes().markerLayer.id='markerLayer';
+    };
+	myoverlay.setMap(map);
+
 	var infowindow = new google.maps.InfoWindow({
 		content: 'Index Stockholm'
 	});
@@ -461,6 +478,8 @@ function initMap() {
 		position: home,
 		icon: icon_home,
 		map: map,
+		// must use optimized false for CSS
+    	optimized: false,
 		// label: { text: 'Index', color: "white", fontSize: '12px', fontFamily: 'Times'},
 		title: 'Index Stockholm'
 	});
