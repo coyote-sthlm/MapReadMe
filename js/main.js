@@ -464,11 +464,11 @@ function initMap() {
 
 	// home
 
-	var myoverlay = new google.maps.OverlayView();
-    myoverlay.draw = function () {
-        this.getPanes().markerLayer.id='markerLayer';
-    };
-	myoverlay.setMap(map);
+	// var myoverlay = new google.maps.OverlayView();
+ //    myoverlay.draw = function () {
+ //        this.getPanes().markerLayer.id='markerLayer';
+ //    };
+	// myoverlay.setMap(map);
 
 	var infowindow = new google.maps.InfoWindow({
 		content: 'Index Stockholm'
