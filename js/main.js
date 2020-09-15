@@ -2,7 +2,7 @@ var rawPositions = [
   {
     "ID": 1,
     "Stadsdel": "City",
-    "Adress": "Vasagatan 1",
+    "Adress": "Klarabergsgatan 41",
     "Latitude": 59.331211,
     "Longitude": 18.058717
   },
