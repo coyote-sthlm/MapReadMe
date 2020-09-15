@@ -60,7 +60,7 @@ var rawPositions = [
     "Stadsdel": "Odenplan",
     "Adress": "Karlbergsvägen (Odenplan)",
     "Latitude": 59.343,
-    "Longitude": 18.05
+    "Longitude": 18.050
   },
   {
     "ID": 10,

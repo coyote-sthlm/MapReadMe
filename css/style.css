@@ -62,7 +62,8 @@ a, a:hover, a:focus {
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
-	background-size: 0;
+	background-position: center;
+	/*background-size: 0;*/
 	/*justify-content: space-between;*/
 }
 
@@ -70,6 +71,7 @@ a, a:hover, a:focus {
 	padding-top: 15px;
 	display: flex;
 	justify-content: flex-end;
+	color: #181818;
 }
 
 .navigate {
@@ -137,6 +139,9 @@ a, a:hover, a:focus {
 	color: white;
 }
 
+.modal-body > img {
+	visibility: hidden;
+}
 
 /** MOBILE **/
 
@@ -197,7 +202,7 @@ a, a:hover, a:focus {
 	.modal-marker .modal-body .actions {
 		padding-bottom: 0;
 		display: flex;
-		color: white;
+		/*color: white;*/
 		justify-content: flex-end;
 		font-size: 20px;
 
