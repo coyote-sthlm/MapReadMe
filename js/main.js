@@ -10,15 +10,15 @@ var rawPositions = [
     "ID": 2,
     "Stadsdel": "City",
     "Adress": "Klarabergsviadukten 55",
-    "Latitude": 18.058717,
-    "Longitude": 18.056534
+    "Latitude": 59.3306787,
+    "Longitude": 18.0561861
   },
   {
     "ID": 3,
     "Stadsdel": "City",
     "Adress": "Vasagatan 28",
-    "Latitude": 59.329324,
-    "Longitude": 18.068581
+    "Latitude": 59.332168,
+    "Longitude": 18.058045
   },
   {
     "ID": 4,
@@ -45,8 +45,8 @@ var rawPositions = [
     "ID": 7,
     "Stadsdel": "Odenplan",
     "Adress": "Odengatan 57",
-    "Latitude": 59.345017,
-    "Longitude": 18.059869
+    "Latitude": 59.343072,
+    "Longitude": 18.054218
   },
   {
     "ID": 8,
@@ -129,8 +129,8 @@ var rawPositions = [
     "ID": 19,
     "Stadsdel": "Södermalm",
     "Adress": "Götgatan 78",
-    "Latitude": 59.307713,
-    "Longitude": 18.076656
+    "Latitude": 59.311976,
+    "Longitude": 18.074255
   },
   {
     "ID": 20,
