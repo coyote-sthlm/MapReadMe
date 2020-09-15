@@ -450,7 +450,7 @@ function initMap() {
 	//$('#aboutModal').modal('show');
 
 	var home = new google.maps.LatLng(59.330473, 18.051249); // index
-	var alt_loc = new google.maps.LatLng(59.324672, 18.087397); // other
+	var alt_loc = new google.maps.LatLng(59.318977, 18.0719137); // tunnelbacken
 
 	var metro_positions = rawPositions.map(convertToMapPositions)
 
@@ -463,12 +463,6 @@ function initMap() {
 	}
 
 	// home
-
-	// var myoverlay = new google.maps.OverlayView();
- //    myoverlay.draw = function () {
- //        this.getPanes().markerLayer.id='markerLayer';
- //    };
-	// myoverlay.setMap(map);
 
 	var infowindow = new google.maps.InfoWindow({
 		content: 'Index Stockholm'

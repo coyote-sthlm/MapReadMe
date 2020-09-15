@@ -45,6 +45,7 @@ a, a:hover, a:focus {
 
 .close {
 	opacity: 1.0;
+	line-height: 1.2;
 }
 
 .modal-content {
@@ -61,13 +62,19 @@ a, a:hover, a:focus {
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
+	background-size: 0;
 	/*justify-content: space-between;*/
 }
 
 .modal-marker .modal-body .actions {
 	padding-top: 15px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
+}
+
+.navigate {
+	border-top: 1px solid white;
+	padding-top: 20px;
 }
 
 .modal-marker .modal-body .actions .navigate-dt a {
@@ -167,7 +174,7 @@ a, a:hover, a:focus {
 	  border-radius: 0;
 	}
 
-/*	.modal-header {
+	/*.modal-header {
 		border-bottom: none;
 	}*/
 
@@ -191,7 +198,7 @@ a, a:hover, a:focus {
 		padding-bottom: 0;
 		display: flex;
 		color: white;
-		justify-content: space-between;
+		justify-content: flex-end;
 		font-size: 20px;
 
 	}
